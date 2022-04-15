@@ -1,0 +1,27 @@
+body {
+  background-color: #faffeb;
+}
+#home {
+  padding-top: 100px;
+}
+span {
+  color: green;
+}
+nav {
+  background-color: #4a4b37;
+}
+
+section {
+  padding-top: 5rem;
+}
+.home-text {
+  padding-top: 120px;
+}
+
+#about {
+  background-color: #4a4b37;
+}
+
+#activity {
+  background-color: #4a4b37;
+}
