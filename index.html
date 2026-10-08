@@ -110,6 +110,13 @@ a:hover{text-decoration-thickness:2px}
 .muslim .shots img{border:1px solid #BFDcD4}
 .dokar .shots img{border:1px solid #CBD2F3}
 
+.web{background:#E2ECF7;color:#14315C}
+.web .kicker{color:#1F5AA6}
+.web .grid{grid-template-columns:.9fr 1.1fr}
+.browser{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.browser img{width:100%;border-radius:10px;border:1px solid #C3D3E8;box-shadow:0 10px 26px rgba(20,49,92,.10)}
+.browser img:first-child{grid-column:1/-1}
+
 /* freelance */
 .section{padding:96px 0}
 .section-head{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:end;margin-bottom:48px}
@@ -215,7 +222,7 @@ a:hover{text-decoration-thickness:2px}
 <section class="shelf" aria-labelledby="h-shelf"><div class="wrap">
   <div class="rule">
     <div><div class="kicker ink">Selected work</div><h2 id="h-shelf">Nine apps, all live.</h2></div>
-    <p>Tap any icon to open it in your app store. Below are the stories behind the five I know best, starting with the one I work on every day.</p>
+    <p>Tap any icon to open it in your app store. Below are the stories behind the five I know best, starting with the one I work on every day, followed by a website I built for a government office.</p>
   </div>
   <ul class="icons">
     <li><a href="https://play.google.com/store/apps/details?id=com.bfi.kosmogram.nusantara" data-ios="https://apps.apple.com/id/app/kosmogram-nusantara/id6757700172"><img src="img/kosmogram_icon.png" width="128" height="128" alt="" loading="lazy">Kosmogram Nusantara</a></li>
@@ -320,6 +327,26 @@ a:hover{text-decoration-thickness:2px}
     </div>
   </div></section>
 </div>
+
+<section class="band web" aria-labelledby="p-kgtk"><div class="wrap grid">
+  <div class="copy">
+    <div class="kicker">Apr – Sep 2026 · Freelance · Web</div>
+    <h2 id="p-kgtk">KGTK Provinsi Bengkulu</h2>
+    <p class="org">Official website · Kementerian Pendidikan Dasar dan Menengah</p>
+    <p>The public website of the Bengkulu teacher and education staff office. I built the frontend on my own: news, public services, accountability reports with a PDF flip-book viewer, a Q&amp;A form, and a satisfaction survey dashboard, all fed by the office's Laravel API.</p>
+    <div class="nums">
+      <div><b>39</b><span>server-rendered pages</span></div>
+      <div><b>1</b><span>developer, end to end</span></div>
+    </div>
+    <p class="stack"><b>Built with</b> React 19, React Router 7 (SSR), TypeScript, Tailwind CSS, Vite</p>
+    <div class="links"><a href="https://kgtkbengkulu.kemendikdasmen.go.id/">Visit the site ↗</a></div>
+  </div>
+  <div class="browser">
+    <img src="img/kgtk_home.jpg" width="1200" height="750" alt="KGTK Provinsi Bengkulu homepage" loading="lazy">
+    <img src="img/kgtk_berita.jpg" width="1200" height="750" alt="News page" loading="lazy">
+    <img src="img/kgtk_survey.jpg" width="1200" height="750" alt="Public satisfaction survey dashboard" loading="lazy">
+  </div>
+</div></section>
 
 <section class="section" id="freelance" aria-labelledby="h-free"><div class="wrap">
   <div class="section-head">
