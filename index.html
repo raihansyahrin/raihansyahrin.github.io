@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhamad Raihan Syahrin Sya'bani — Mobile Developer</title>
+<meta name="description" content="Portfolio of Muhamad Raihan Syahrin Sya'bani, Flutter Mobile Developer with 9 apps published on Google Play and the App Store.">
+<link rel="icon" href="img/kosmogram_icon.png">
+<style>
+:root{--ink:#14181f;--muted:#5b6472;--line:#e3e6eb;--bg:#fbfbfc;--card:#ffffff;--accent:#1a4d8f;--chip:#eef3fa}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:5;background:rgba(251,251,252,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px;gap:16px}
+nav b{font-size:15px;white-space:nowrap}
+nav .links{display:flex;gap:18px;font-size:14px;overflow-x:auto}
+nav .links a{color:var(--muted);text-decoration:none;white-space:nowrap}
+nav .links a:hover{color:var(--ink)}
+header{padding:72px 0 48px}
+header h1{font-size:clamp(30px,5vw,44px);line-height:1.15;margin:0 0 8px;letter-spacing:-.5px}
+header .role{font-size:clamp(17px,2.4vw,20px);color:var(--accent);font-weight:600;margin:0 0 18px}
+header p.lead{max-width:720px;color:#2b313b;font-size:17px;margin:0 0 24px}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 28px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-width:140px}
+.stat b{display:block;font-size:22px}
+.stat span{font-size:13px;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);text-decoration:none;font-size:14px;font-weight:600}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+section{padding:40px 0}
+h2{font-size:13px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin:0 0 20px}
+.project{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin:0 0 24px}
+.ph{display:flex;gap:14px;align-items:center;margin:0 0 6px}
+.ph img{width:52px;height:52px;border-radius:12px;border:1px solid var(--line)}
+.ph h3{margin:0;font-size:21px;line-height:1.25}
+.meta{font-size:14px;color:var(--muted);margin:2px 0 0}
+.project p{margin:14px 0 0;color:#2b313b}
+.project ul{margin:12px 0 0;padding-left:20px;color:#2b313b}
+.project li{margin:4px 0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.chips span{background:var(--chip);color:var(--accent);font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px}
+.shots{display:flex;gap:12px;overflow-x:auto;margin:20px -4px 0;padding:4px 4px 10px;scroll-snap-type:x mandatory}
+.shots img{height:360px;width:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 4px 14px rgba(20,24,31,.08);scroll-snap-align:start;flex:0 0 auto}
+.stores{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.stores a{font-size:13.5px;font-weight:600;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;color:var(--ink);background:var(--bg)}
+.stores a:hover{border-color:var(--accent);color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.mini .ph img{width:40px;height:40px;border-radius:10px}
+.mini .ph h3{font-size:17px}
+.mini p{margin:10px 0 0;font-size:15px;color:#2b313b}
+.mini .shots img{height:260px}
+.timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:22px}
+.tl{position:relative;margin:0 0 22px}
+.tl:before{content:"";position:absolute;left:-29px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.tl b{font-size:16px}
+.tl .when{font-size:13.5px;color:var(--muted)}
+.tl p{margin:4px 0 0;font-size:15px;color:#2b313b}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.skills div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.skills b{display:block;margin:0 0 6px}
+.skills span{font-size:14.5px;color:#2b313b}
+footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:14px}
+footer .cta{margin:12px 0 0}
+@media (max-width:600px){
+  header{padding:44px 0 32px}
+  .project{padding:18px}
+  .shots img{height:300px}
+  nav .links{gap:14px}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <b>Raihan Syahrin</b>
+  <div class="links"><a href="#work">Work</a><a href="#more">More projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<header><div class="wrap">
+  <h1>Muhamad Raihan Syahrin Sya'bani</h1>
+  <p class="role">Flutter Mobile Developer · Jakarta, Indonesia</p>
+  <p class="lead">I build production mobile apps with Flutter, BLoC/Cubit, and Clean Architecture, and own them end to end, from architecture and automated testing to CI/CD, crash monitoring, and store release. I also build backend and AI services in Python.</p>
+  <div class="stats">
+    <div class="stat"><b>9</b><span>apps on Google Play &amp; App Store</span></div>
+    <div class="stat"><b>2+ yrs</b><span>Flutter experience</span></div>
+    <div class="stat"><b>300</b><span>automated tests on one app</span></div>
+  </div>
+  <div class="cta">
+    <a class="btn primary" href="mailto:raihansyahrin@gmail.com">Email me</a>
+    <a class="btn" href="https://linkedin.com/in/raihansyahrin">LinkedIn</a>
+    <a class="btn" href="https://github.com/raihansyahrin">GitHub</a>
+  </div>
+</div></header>
+
+<main class="wrap">
+
+<section id="work">
+  <h2>Selected work</h2>
+
+  <article class="project">
+    <div class="ph"><img src="img/kosmogram_icon.png" alt="Kosmogram Nusantara icon">
+      <div><h3>Kosmogram Nusantara</h3><p class="meta">PT Budhi Futura Incresca · Mobile Developer · 2026 – present</p></div></div>
+    <p>Traditional Indonesian calendars like Batak, Bali, Jawa, Sunda, and Chinese are hard to access, often kept in physical books or by local elders. Kosmogram Nusantara brings six calendar systems into one app, alongside moon phases, weather, and cultural content. I own the Flutter app end to end, working with a backend engineer and a UI/UX designer.</p>
+    <ul>
+      <li>Shipped 9 releases in 9 months across 24 feature modules with BLoC/Cubit and Clean Architecture.</li>
+      <li>Built the GitLab CI/CD and fastlane pipeline: lint gate, 300 automated tests, Android and iOS builds, Play Store and TestFlight delivery.</li>
+      <li>Built a plant-growing gamification loop, a Batak constellation sky map, native home widgets, iOS Live Activities, subscriptions, and push notifications.</li>
+      <li>Monitored stability with Firebase Crashlytics and Analytics.</li>
+    </ul>
+    <div class="shots">
+      <img src="img/kosmogram_1.jpg" alt="Kosmogram Nusantara welcome screen" loading="lazy">
+      <img src="img/kosmogram_2.jpg" alt="Kosmogram Nusantara home screen" loading="lazy">
+      <img src="img/kosmogram_3.jpg" alt="Kosmogram Nusantara Puspa garden" loading="lazy">
+      <img src="img/kosmogram_4.jpg" alt="Kosmogram Nusantara ethnoastronomy reading" loading="lazy">
+    </div>
+    <div class="chips"><span>Flutter</span><span>BLoC/Cubit</span><span>Clean Architecture</span><span>Firebase</span><span>GitLab CI/CD</span><span>fastlane</span><span>In-app purchase</span><span>Home widgets</span></div>
+    <div class="stores"><a href="https://play.google.com/store/apps/details?id=com.bfi.kosmogram.nusantara">Google Play</a><a href="https://apps.apple.com/id/app/kosmogram-nusantara/id6757700172">App Store</a></div>
+  </article>
+
+  <article class="project">
+    <div class="ph"><img src="img/nova_icon.png" alt="Nova icon">
+      <div><h3>Nova</h3><p class="meta">PT Paragon Technology and Innovation · Mobile Engineer Intern · Nov 2025 – May 2026</p></div></div>
+    <p>Nova is an enterprise super app that replaces manual tracking with one platform for frontline workers: attendance, call procedures, achievements, and history.</p>
+    <ul>
+      <li>Delivered 85 agile story points across 8 core modules, moving between Flutter and native Android (Kotlin/XML).</li>
+      <li>Built reusable components for PARADISE, the internal Flutter design system, and shipped fixes with unit and widget tests.</li>
+      <li>The app reached an 89.95% customer satisfaction score.</li>
+    </ul>
+    <div class="shots">
+      <img src="img/nova_1.jpg" alt="Nova attendance screen" loading="lazy">
+      <img src="img/nova_2.jpg" alt="Nova call procedure list" loading="lazy">
+      <img src="img/nova_3.jpg" alt="Nova achievements" loading="lazy">
+      <img src="img/nova_4.jpg" alt="Nova history" loading="lazy">
+    </div>
+    <div class="chips"><span>Flutter</span><span>Kotlin</span><span>Android XML</span><span>Modularization</span><span>Design system</span><span>Unit &amp; widget tests</span></div>
+    <div class="stores"><a href="https://play.google.com/store/apps/details?id=com.pti.nova">Google Play</a><a href="https://apps.apple.com/us/app/nova-paragon/id6733228265">App Store</a></div>
+  </article>
+
+  <article class="project">
+    <div class="ph"><img src="img/osan_icon.png" alt="Obrol Sandi icon">
+      <div><h3>Obrol Sandi</h3><p class="meta">PT Budhi Futura Incresca · Mobile Developer &amp; AI Fullstack · 2026</p></div></div>
+    <p>Obrol Sandi is an AI chatbot focused on Indonesian cultural heritage. I built the mobile app from scratch and contributed to the web frontend.</p>
+    <ul>
+      <li>Built real-time streaming chat, project and conversation management, guest sessions, and file and image uploads in Flutter.</li>
+      <li>Took the app through App Store review to release on both stores.</li>
+      <li>Built AI chat UX in the React and TypeScript web app, including the model's thinking state during translation.</li>
+    </ul>
+    <div class="shots">
+      <img src="img/osan_2.jpg" alt="Obrol Sandi login" loading="lazy">
+      <img src="img/osan_3.jpg" alt="Obrol Sandi new chat" loading="lazy">
+      <img src="img/osan_4.jpg" alt="Obrol Sandi conversation" loading="lazy">
+    </div>
+    <div class="chips"><span>Flutter</span><span>BLoC/Cubit</span><span>Streaming (SSE)</span><span>Dio/Retrofit</span><span>React</span><span>TypeScript</span></div>
+    <div class="stores"><a href="https://play.google.com/store/apps/details?id=com.bfi.osan">Google Play</a><a href="https://apps.apple.com/us/app/obrol-sandi/id6777989057">App Store</a></div>
+  </article>
+
+  <article class="project">
+    <div class="ph"><img src="img/dokar_icon.png" alt="DOKAR icon">
+      <div><h3>DOKAR</h3><p class="meta">PT Muti Jaya Sejahtera · Mobile App Developer · Mar – May 2025</p></div></div>
+    <p>DOKAR (Dompet Karyawan) puts attendance, leave, meal coupons, and salary monitoring for 100+ employees into one mobile app.</p>
+    <ul>
+      <li>Built the attendance and catering booking features in Flutter and GetX.</li>
+      <li>Fixed runtime memory issues to improve app stability, working with the team's tech lead.</li>
+    </ul>
+    <div class="shots">
+      <img src="img/dokar_1.jpg" alt="DOKAR overview" loading="lazy">
+      <img src="img/dokar_2.jpg" alt="DOKAR fingerprint attendance" loading="lazy">
+      <img src="img/dokar_3.jpg" alt="DOKAR features" loading="lazy">
+      <img src="img/dokar_4.jpg" alt="DOKAR savings" loading="lazy">
+    </div>
+    <div class="chips"><span>Flutter</span><span>GetX</span><span>REST API</span><span>Performance</span></div>
+    <div class="stores"><a href="https://play.google.com/store/apps/details?id=com.mjs.dokar">Google Play</a></div>
+  </article>
+
+  <article class="project">
+    <div class="ph"><img src="img/temanmuslim_icon.png" alt="Teman Muslim icon">
+      <div><h3>Teman Muslim: Al-Quran, Sholat</h3><p class="meta">PT Suitmedia Kreasi Indonesia · Mobile Developer Intern · Sep – Dec 2024</p></div></div>
+    <p>One reliable app for daily religious needs. I focused on core features where accuracy matters most: prayer times and Hajj guidance.</p>
+    <div class="shots">
+      <img src="img/temanmuslim_1.jpg" alt="Teman Muslim home" loading="lazy">
+      <img src="img/temanmuslim_2.jpg" alt="Teman Muslim Al-Quran" loading="lazy">
+      <img src="img/temanmuslim_3.jpg" alt="Teman Muslim prayer schedule" loading="lazy">
+      <img src="img/temanmuslim_4.jpg" alt="Teman Muslim fatwa collection" loading="lazy">
+    </div>
+    <div class="chips"><span>Flutter</span><span>GetX</span><span>Firebase</span><span>Push notifications</span><span>Deep links</span></div>
+    <div class="stores"><a href="https://play.google.com/store/apps/details?id=com.temanmuslim">Google Play</a><a href="https://apps.apple.com/id/app/teman-muslim-al-quran-sholat/id6739802776">App Store</a></div>
+  </article>
+</section>
+
+<section id="more">
+  <h2>Freelance · inclusive education apps (Jan – Mar 2026)</h2>
+  <p style="margin:-8px 0 20px;color:#2b313b;max-width:760px">Four Flutter and Firebase apps for university research clients, built for children with special needs and published on Google Play. I led a 3-person team on Swarana and built the other three solo.</p>
+  <div class="grid">
+    <div class="mini">
+      <div class="ph"><img src="img/swarana_icon.png" alt="Swarana icon"><div><h3>Swarana</h3><p class="meta">Team lead (3 developers)</p></div></div>
+      <p>Translates text and voice into Indonesian Sign Language with 3D animated characters.</p>
+      <div class="shots"><img src="img/swarana_3.jpg" alt="Swarana menu" loading="lazy"><img src="img/swarana_4.jpg" alt="Swarana lesson" loading="lazy"></div>
+      <div class="stores"><a href="https://play.google.com/store/apps/details?id=com.umsu.isyara">Google Play</a></div>
+    </div>
+    <div class="mini">
+      <div class="ph"><img src="img/geoculturar_icon.png" alt="GeoCulturAR icon"><div><h3>GeoCulturAR</h3><p class="meta">Solo</p></div></div>
+      <p>AR geometry lessons built on North Sumatran cultural objects like traditional houses.</p>
+      <div class="shots"><img src="img/geoculturar_3.jpg" alt="GeoCulturAR menu" loading="lazy"><img src="img/geoculturar_4.jpg" alt="GeoCulturAR AR view" loading="lazy"></div>
+      <div class="stores"><a href="https://play.google.com/store/apps/details?id=com.umsu.geoculturar">Google Play</a></div>
+    </div>
+    <div class="mini">
+      <div class="ph"><img src="img/insani_icon.png" alt="Insani icon"><div><h3>Insani</h3><p class="meta">Solo</p></div></div>
+      <p>3D and AR Islamic learning: hijaiyah letters, prayer, ablution, and daily prayers.</p>
+      <div class="shots"><img src="img/insani_3.jpg" alt="Insani menu" loading="lazy"><img src="img/insani_4.jpg" alt="Insani letter lesson" loading="lazy"></div>
+      <div class="stores"><a href="https://play.google.com/store/apps/details?id=com.umsu.insani">Google Play</a></div>
+    </div>
+    <div class="mini">
+      <div class="ph"><img src="img/histomathic_icon.png" alt="HistoMathic icon"><div><h3>HistoMathic</h3><p class="meta">Solo</p></div></div>
+      <p>Maps geometry formulas onto North Sumatran historical landmarks in 3D AR.</p>
+      <div class="shots"><img src="img/histomathic_3.jpg" alt="HistoMathic AR landmark" loading="lazy"><img src="img/histomathic_4.jpg" alt="HistoMathic AR view" loading="lazy"></div>
+      <div class="stores"><a href="https://play.google.com/store/apps/details?id=com.histomathic.histomathic">Google Play</a></div>
+    </div>
+  </div>
+
+  <h2 style="margin-top:40px">Backend &amp; AI</h2>
+  <div class="grid">
+    <div class="mini">
+      <div class="ph"><div><h3>Batik Lens</h3><p class="meta">PT Budhi Futura Incresca · Python</p></div></div>
+      <p>A batik motif recognition service with FastAPI and PyTorch. I built a licensed dataset from 5 sources and fine-tuned the model, raising accuracy from 40% to 92% across 44 motifs.</p>
+      <div class="chips"><span>FastAPI</span><span>PyTorch</span><span>ViT</span><span>DINOv2</span></div>
+    </div>
+    <div class="mini">
+      <div class="ph"><div><h3>Book &amp; PDF upload pipeline</h3><p class="meta">PT Budhi Futura Incresca · Go</p></div></div>
+      <p>An upload pipeline for the company's cultural-data platform. It splits books into page ranges, runs OCR, and turns them into cited entries.</p>
+      <div class="chips"><span>Go</span><span>PostgreSQL</span><span>OCR</span><span>Docker</span></div>
+    </div>
+    <div class="mini">
+      <div class="ph"><div><h3>Thesis, published in IEEE</h3><p class="meta">Telkom University · 2025</p></div></div>
+      <p>System code generation based on large language model fine-tuning with QLoRA.</p>
+      <div class="stores"><a href="https://ieeexplore.ieee.org/document/11193032">Read on IEEE Xplore</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="tl"><b>PT Budhi Futura Incresca</b> · Mobile Developer &amp; AI Fullstack Engineer<div class="when">Aug 2025 – present · South Jakarta</div></div>
+    <div class="tl"><b>PT Paragon Technology and Innovation</b> · Mobile Engineer Intern<div class="when">Nov 2025 – May 2026 · South Jakarta</div></div>
+    <div class="tl"><b>Freelance</b> · Mobile Developer<div class="when">Jan – Mar 2026 · Remote</div></div>
+    <div class="tl"><b>PT Muti Jaya Sejahtera</b> · Mobile App Developer<div class="when">Mar – May 2025 · Remote</div></div>
+    <div class="tl"><b>Mobile Innovation Laboratory</b> · Mentor and PIC, Flutter Class<div class="when">Oct 2024 – Mar 2025 · Bandung</div><p>Mentored 20+ interns to a 98% task completion rate.</p></div>
+    <div class="tl"><b>PT Suitmedia Kreasi Indonesia</b> · Mobile Developer Intern<div class="when">Sep – Dec 2024 · Bandung</div></div>
+    <div class="tl"><b>PT PLN (Persero) Pusharlis UP2W IV</b> · Mobile Developer<div class="when">Jul – Oct 2024 · Bandung</div><p>17-page inventory dashboard app, about 55% faster inventory management.</p></div>
+    <div class="tl"><b>PT Indi Teknokreasi Internasional</b> · Mobile Developer Intern<div class="when">Feb – Jun 2024 · Jakarta</div></div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><b>Mobile</b><span>Flutter, Dart, BLoC/Cubit, GetX, Clean Architecture, REST API integration, Kotlin, Jetpack Compose, SwiftUI, home widgets, Live Activities, in-app purchase</span></div>
+    <div><b>Platform &amp; delivery</b><span>Firebase (Analytics, Crashlytics, FCM, Remote Config), GitLab CI/CD, fastlane, Docker, App Store Connect, Play Console</span></div>
+    <div><b>Backend &amp; AI</b><span>Python, FastAPI, PyTorch, Hugging Face, PostgreSQL, MySQL, React, TypeScript</span></div>
+    <div><b>Quality &amp; tools</b><span>Unit, widget, and integration tests (bloc_test, mocktail, pytest), Claude Code, agentic workflows</span></div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contact"><div class="wrap">
+  <b style="color:var(--ink)">Let's talk.</b> Based in Jakarta, open to mobile and software engineering roles.
+  <div class="cta">
+    <a class="btn primary" href="mailto:raihansyahrin@gmail.com">raihansyahrin@gmail.com</a>
+    <a class="btn" href="https://linkedin.com/in/raihansyahrin">LinkedIn</a>
+    <a class="btn" href="https://github.com/raihansyahrin">GitHub</a>
+  </div>
+</div></footer>
+
+</body>
+</html>
