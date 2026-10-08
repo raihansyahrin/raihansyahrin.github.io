@@ -47,11 +47,23 @@ a:hover{text-decoration-thickness:2px}
 .facts dd{margin:0;font-weight:600}
 
 /* about */
-.about{padding:88px 0 96px}
+.about{padding:88px 0 72px}
 .about .grid{display:grid;grid-template-columns:1fr 1.4fr;gap:56px}
 .about h2{font:800 clamp(34px,4.6vw,52px)/1 var(--display);letter-spacing:-.03em;margin:12px 0 0}
 .about p{margin:0 0 18px;font-size:18px;color:var(--ink-2);max-width:620px}
 .about p:last-child{margin-bottom:0;color:var(--ink)}
+
+/* shelf: transition into work */
+.shelf{padding:0 0 88px}
+.shelf .rule{border-top:1px solid var(--rule);padding-top:40px;display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:end}
+.shelf h2{font:800 clamp(30px,4vw,44px)/1.02 var(--display);letter-spacing:-.03em;margin:12px 0 0}
+.shelf p{margin:0;font-size:18px;color:var(--ink-2);max-width:560px}
+.icons{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(9,1fr);gap:14px}
+.icons a{display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;font-size:12.5px;color:var(--muted);text-align:center;line-height:1.25}
+.icons img{width:100%;max-width:76px;aspect-ratio:1;border-radius:22%;border:1px solid var(--rule);background:#fff;transition:transform .2s}
+.icons a:hover img{transform:translateY(-3px)}
+.icons a:hover{color:var(--ink)}
+@media (prefers-reduced-motion:reduce){.icons img{transition:none}}
 
 /* project bands */
 .band{padding:88px 0}
@@ -149,6 +161,8 @@ a:hover{text-decoration-thickness:2px}
   .band.flip .copy{order:0}
   .pair{grid-template-columns:1fr}
   .apps{grid-template-columns:repeat(2,1fr)}
+  .shelf .rule{grid-template-columns:1fr;gap:16px}
+  .icons{grid-template-columns:repeat(5,1fr);row-gap:22px}
   .trio{grid-template-columns:1fr}
   .trio > div,.trio > div + div{padding:28px 0;border-left:0;border-top:1px solid #D3CBBB}
 }
@@ -195,6 +209,24 @@ a:hover{text-decoration-thickness:2px}
     <p>I build Flutter apps, then stick around for the boring part: tests, release pipelines, and crash reports, so the app still works long after the launch post.</p>
     <p>Somehow most of my projects end up being about Indonesian culture: six calendar systems, batik motifs, sign language for deaf kids. I graduated <i>cum laude</i> from Telkom University, where I also taught Flutter to 20+ interns and learned that explaining state management is harder than writing it.</p>
   </div>
+</div></section>
+
+<section class="shelf" aria-labelledby="h-shelf"><div class="wrap">
+  <div class="rule">
+    <div><div class="kicker ink">Selected work</div><h2 id="h-shelf">Nine apps, all live.</h2></div>
+    <p>Tap any icon to open it on Google Play. Below are the stories behind the five I know best, starting with the one I work on every day.</p>
+  </div>
+  <ul class="icons">
+    <li><a href="https://play.google.com/store/apps/details?id=com.bfi.kosmogram.nusantara"><img src="img/kosmogram_icon.png" width="128" height="128" alt="" loading="lazy">Kosmogram Nusantara</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.pti.nova"><img src="img/nova_icon.png" width="128" height="128" alt="" loading="lazy">Nova</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.bfi.osan"><img src="img/osan_icon.png" width="128" height="128" alt="" loading="lazy">Obrol Sandi</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.mjs.dokar"><img src="img/dokar_icon.png" width="128" height="128" alt="" loading="lazy">DOKAR</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.temanmuslim"><img src="img/temanmuslim_icon.png" width="128" height="128" alt="" loading="lazy">Teman Muslim</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.umsu.isyara"><img src="img/swarana_icon.png" width="128" height="128" alt="" loading="lazy">Swarana</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.umsu.geoculturar"><img src="img/geoculturar_icon.png" width="128" height="128" alt="" loading="lazy">GeoCulturAR</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.umsu.insani"><img src="img/insani_icon.png" width="128" height="128" alt="" loading="lazy">Insani</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.histomathic.histomathic"><img src="img/histomathic_icon.png" width="128" height="128" alt="" loading="lazy">HistoMathic</a></li>
+  </ul>
 </div></section>
 
 <main id="work">
