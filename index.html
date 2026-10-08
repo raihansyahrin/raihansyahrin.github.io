@@ -214,14 +214,14 @@ a:hover{text-decoration-thickness:2px}
 <section class="shelf" aria-labelledby="h-shelf"><div class="wrap">
   <div class="rule">
     <div><div class="kicker ink">Selected work</div><h2 id="h-shelf">Nine apps, all live.</h2></div>
-    <p>Tap any icon to open it on Google Play. Below are the stories behind the five I know best, starting with the one I work on every day.</p>
+    <p>Tap any icon to open it in your app store. Below are the stories behind the five I know best, starting with the one I work on every day.</p>
   </div>
   <ul class="icons">
-    <li><a href="https://play.google.com/store/apps/details?id=com.bfi.kosmogram.nusantara"><img src="img/kosmogram_icon.png" width="128" height="128" alt="" loading="lazy">Kosmogram Nusantara</a></li>
-    <li><a href="https://play.google.com/store/apps/details?id=com.pti.nova"><img src="img/nova_icon.png" width="128" height="128" alt="" loading="lazy">Nova</a></li>
-    <li><a href="https://play.google.com/store/apps/details?id=com.bfi.osan"><img src="img/osan_icon.png" width="128" height="128" alt="" loading="lazy">Obrol Sandi</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.bfi.kosmogram.nusantara" data-ios="https://apps.apple.com/id/app/kosmogram-nusantara/id6757700172"><img src="img/kosmogram_icon.png" width="128" height="128" alt="" loading="lazy">Kosmogram Nusantara</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.pti.nova" data-ios="https://apps.apple.com/us/app/nova-paragon/id6733228265"><img src="img/nova_icon.png" width="128" height="128" alt="" loading="lazy">Nova</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.bfi.osan" data-ios="https://apps.apple.com/us/app/obrol-sandi/id6777989057"><img src="img/osan_icon.png" width="128" height="128" alt="" loading="lazy">Obrol Sandi</a></li>
     <li><a href="https://play.google.com/store/apps/details?id=com.mjs.dokar"><img src="img/dokar_icon.png" width="128" height="128" alt="" loading="lazy">DOKAR</a></li>
-    <li><a href="https://play.google.com/store/apps/details?id=com.temanmuslim"><img src="img/temanmuslim_icon.png" width="128" height="128" alt="" loading="lazy">Teman Muslim</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.temanmuslim" data-ios="https://apps.apple.com/id/app/teman-muslim-al-quran-sholat/id6739802776"><img src="img/temanmuslim_icon.png" width="128" height="128" alt="" loading="lazy">Teman Muslim</a></li>
     <li><a href="https://play.google.com/store/apps/details?id=com.umsu.isyara"><img src="img/swarana_icon.png" width="128" height="128" alt="" loading="lazy">Swarana</a></li>
     <li><a href="https://play.google.com/store/apps/details?id=com.umsu.geoculturar"><img src="img/geoculturar_icon.png" width="128" height="128" alt="" loading="lazy">GeoCulturAR</a></li>
     <li><a href="https://play.google.com/store/apps/details?id=com.umsu.insani"><img src="img/insani_icon.png" width="128" height="128" alt="" loading="lazy">Insani</a></li>
@@ -419,5 +419,14 @@ a:hover{text-decoration-thickness:2px}
   <div class="foot">© 2026 Muhamad Raihan Syahrin Sya'bani</div>
 </div></footer>
 
+<script>
+/* On iPhone and iPad, send icons with an App Store listing there; everything else stays on Google Play. */
+(function(){
+  var ua=navigator.userAgent;
+  var isIOS=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  if(!isIOS)return;
+  document.querySelectorAll('a[data-ios]').forEach(function(a){a.href=a.getAttribute('data-ios');});
+})();
+</script>
 </body>
 </html>
