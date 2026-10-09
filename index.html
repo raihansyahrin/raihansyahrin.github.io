@@ -142,6 +142,7 @@ a:hover{text-decoration-thickness:2px}
 .trio p{margin:0;font-size:15.5px;color:var(--ink-2)}
 .trio .big{font:800 clamp(48px,6vw,72px)/1 var(--display);letter-spacing:-.03em;color:var(--link);margin:4px 0 14px}
 .trio a{color:var(--link);font-weight:600}
+.trio p.note{font-size:14px;color:var(--muted);margin:-6px 0 14px}
 
 /* experience + skills */
 .two{display:grid;grid-template-columns:1.25fr 1fr;gap:72px}
@@ -408,14 +409,16 @@ a:hover{text-decoration-thickness:2px}
 
 <section class="section other" aria-labelledby="h-other"><div class="wrap">
   <div class="section-head">
-    <div><div class="kicker">Off the phone</div><h2 id="h-other">Backend, data, research</h2></div>
+    <div><div class="kicker">Off the phone</div><h2 id="h-other">AI, backend, research</h2></div>
     <p>Work that doesn't ship as an app.</p>
   </div>
   <div class="trio">
     <div>
-      <h3>Batik Lens</h3>
-      <div class="big">40→92%</div>
-      <p>A Python service that names a batik motif from a photo. It was trained on drawings, so I collected licensed photos from five datasets and retrained it on 44 motifs.</p>
+      <h3>Batik Lens · AI engineer</h3>
+      <div class="big">92%</div>
+      <p class="note">Correct first guess on 409 test photos the model had never seen, across 44 motifs. The previous approach, which matched photos against drawings, got 40%.</p>
+      <p>Point a camera at batik and get the motif's name, origin, and story. I built it end to end: retrained a vision transformer on real photos, wrote the FastAPI API, a Next.js admin dashboard, and the Flutter app, and deployed it with Docker and PostgreSQL. It now runs inside the PhyBatik Pro app.</p>
+      <p><a href="https://play.google.com/store/apps/details?id=com.bfi.phybatikpro" data-ios="https://apps.apple.com/id/app/phybatik-pro/id6757024989">PhyBatik Pro ↗</a></p>
     </div>
     <div>
       <h3>Book uploads</h3>
