@@ -45,10 +45,16 @@ a:hover{text-decoration-thickness:2px}
 
 /* intro */
 .intro{padding:72px 0 80px;border-bottom:1px solid var(--rule)}
-.intro-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:56px;align-items:end}
-.intro h1{font:800 clamp(56px,9vw,112px)/.92 var(--display);letter-spacing:-.035em;margin:0}
-.intro h1 em{font-style:normal;color:var(--link)}
+.intro-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+.intro h1{font:800 clamp(42px,6.2vw,80px)/.98 var(--display);letter-spacing:-.035em;margin:0}
+.intro .role{font:700 clamp(24px,3vw,36px)/1.1 var(--display);letter-spacing:-.02em;color:var(--ink-2);margin:14px 0 28px}
+.intro .role em{font-style:normal;color:var(--link)}
 .intro p{font-size:19px;color:var(--ink-2);margin:0 0 22px}
+.phones{display:flex;justify-content:center;align-items:flex-start}
+.phone{position:relative;margin:0;width:min(46%,230px);border:8px solid var(--ink);border-radius:36px;background:var(--ink);overflow:hidden;box-shadow:0 26px 50px rgba(22,21,19,.16)}
+.phone::before{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:30%;height:15px;border-radius:10px;background:var(--ink);z-index:1}
+.phone img{border-radius:28px}
+.phone + .phone{margin:56px 0 0 -28px}
 .facts{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:15.5px;border-top:1px solid var(--rule);padding-top:18px}
 .facts dt{color:var(--muted)}
 .facts dd{margin:0;font-weight:600}
@@ -233,13 +239,18 @@ a:hover{text-decoration-thickness:2px}
 
 <header class="intro" id="top"><div class="wrap">
   <div class="intro-grid">
-    <h1>Mobile<br>Developer<em>.</em></h1>
     <div>
+      <h1>Muhamad Raihan Syahrin Sya'bani</h1>
+      <p class="role">Mobile Developer<em>.</em></p>
       <p>2+ years shipping mobile apps.</p>
       <dl class="facts">
         <dt>Shipped</dt><dd>9 apps on Google Play and the App Store</dd>
         <dt>Stack</dt><dd>Flutter, Dart, BLoC/Cubit, Firebase, Kotlin, SwiftUI</dd>
       </dl>
+    </div>
+    <div class="phones">
+      <figure class="phone"><img src="img/kosmogram_2.jpg" width="540" height="1200" alt="Kosmogram Nusantara home screen"></figure>
+      <figure class="phone"><img src="img/osan_4.jpg" width="540" height="1200" alt="A conversation in Obrol Sandi"></figure>
     </div>
   </div>
 </div></header>
