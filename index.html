@@ -53,7 +53,7 @@ a:hover{text-decoration-thickness:2px}
 .loc svg{width:16px;height:16px;color:var(--link)}
 .intro h1{margin:0;font-weight:400}
 .intro h1 .name{display:block;font:500 clamp(28px,3.4vw,44px)/1.12 var(--display);letter-spacing:-.02em;color:var(--ink)}
-.intro h1 .role{display:block;font:800 clamp(46px,6.6vw,92px)/.95 var(--display);letter-spacing:-.04em;color:var(--link);margin-top:10px}
+.intro h1 .role{display:block;font:800 clamp(22px,2.6vw,32px)/1.1 var(--display);letter-spacing:-.02em;color:var(--link);margin-top:8px}
 .intro .lede{font-size:19px;color:var(--ink-2);margin:26px 0 24px;max-width:440px}
 /* hero phones: drawn in HTML, no screenshots */
 .phones{position:relative;height:clamp(420px,42vw,540px)}
@@ -77,6 +77,11 @@ a:hover{text-decoration-thickness:2px}
 .stats span{font-size:4.2cqw;color:var(--muted)}
 .tags{display:flex;flex-wrap:wrap;justify-content:center;gap:2.4cqw;margin-bottom:7cqw}
 .tags i{font-style:normal;font-size:4.4cqw;padding:1.4cqw 3cqw;border:1px solid var(--rule);border-radius:2cqw;background:#FBFAF7}
+.island{position:absolute;top:3.4cqw;left:50%;transform:translateX(-50%);width:31cqw;height:9cqw;border-radius:5cqw;background:#0B0B0A;z-index:3}
+.island::after{content:"";position:absolute;right:3cqw;top:50%;transform:translateY(-50%);width:4cqw;height:4cqw;border-radius:50%;background:radial-gradient(circle at 35% 35%,#3A4660 0 30%,#141821 60%)}
+.hbar{position:absolute;bottom:2.6cqw;left:50%;transform:translateX(-50%);width:34cqw;height:1.4cqw;border-radius:1cqw;z-index:3}
+.home .hbar{background:#EEE9DF}
+.me .hbar{background:var(--ink)}
 .me .cta{display:block;width:100%;padding:4cqw 0;border-radius:3cqw;background:#26324A;color:#F6F4EF;font-weight:600;text-decoration:none}
 .facts{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:15.5px;border-top:1px solid var(--rule);padding-top:18px}
 .facts dt{color:var(--muted)}
@@ -276,8 +281,8 @@ a:hover{text-decoration-thickness:2px}
     </dl>
   </div>
   <div class="phones" role="img" aria-label="Two phone mockups: a home screen with the nine apps I have shipped, and a profile card">
-    <div class="phone home"><div class="scr"><p>Apps I've shipped</p><div class="grid9"><span><img src="img/kosmogram_icon.png" width="128" height="128" alt="">Kosmogram</span><span><img src="img/nova_icon.png" width="128" height="128" alt="">Nova</span><span><img src="img/osan_icon.png" width="128" height="128" alt="">Obrol Sandi</span><span><img src="img/dokar_icon.png" width="128" height="128" alt="">DOKAR</span><span><img src="img/temanmuslim_icon.png" width="128" height="128" alt="">Teman Muslim</span><span><img src="img/swarana_icon.png" width="128" height="128" alt="">Swarana</span><span><img src="img/geoculturar_icon.png" width="128" height="128" alt="">GeoCulturAR</span><span><img src="img/insani_icon.png" width="128" height="128" alt="">Insani</span><span><img src="img/histomathic_icon.png" width="128" height="128" alt="">HistoMathic</span></div></div></div>
-    <div class="phone me"><div class="scr">
+    <div class="phone home"><span class="island"></span><span class="hbar"></span><div class="scr"><p>Apps I've shipped</p><div class="grid9"><span><img src="img/kosmogram_icon.png" width="128" height="128" alt="">Kosmogram</span><span><img src="img/nova_icon.png" width="128" height="128" alt="">Nova</span><span><img src="img/osan_icon.png" width="128" height="128" alt="">Obrol Sandi</span><span><img src="img/dokar_icon.png" width="128" height="128" alt="">DOKAR</span><span><img src="img/temanmuslim_icon.png" width="128" height="128" alt="">Teman Muslim</span><span><img src="img/swarana_icon.png" width="128" height="128" alt="">Swarana</span><span><img src="img/geoculturar_icon.png" width="128" height="128" alt="">GeoCulturAR</span><span><img src="img/insani_icon.png" width="128" height="128" alt="">Insani</span><span><img src="img/histomathic_icon.png" width="128" height="128" alt="">HistoMathic</span></div></div></div>
+    <div class="phone me"><span class="island"></span><span class="hbar"></span><div class="scr">
       <div class="av"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="13" y="2" width="38" height="60" rx="10" fill="#F6F4EF"/><rect x="27" y="6" width="10" height="2.4" rx="1.2" fill="#E0532F"/><path d="M25.5 49V17H33.5a7.5 7.5 0 0 1 0 15H25.5M33.5 32l8 17" fill="none" stroke="#26324A" stroke-width="5.5" stroke-linejoin="round"/></svg></div>
       <b class="n">Raihan Syahrin</b>
       <span class="r">Mobile Developer · Jakarta</span>
