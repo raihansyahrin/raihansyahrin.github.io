@@ -46,13 +46,12 @@ a:hover{text-decoration-thickness:2px}
 /* intro */
 .intro{padding:72px 0 80px;border-bottom:1px solid var(--rule)}
 .intro-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
-.intro h1{font:800 clamp(42px,6.2vw,80px)/.98 var(--display);letter-spacing:-.035em;margin:0}
+.intro h1{font:800 clamp(40px,5.4vw,72px)/.98 var(--display);letter-spacing:-.035em;margin:0}
 .intro .role{font:700 clamp(24px,3vw,36px)/1.1 var(--display);letter-spacing:-.02em;color:var(--ink-2);margin:14px 0 28px}
 .intro .role em{font-style:normal;color:var(--link)}
 .intro p{font-size:19px;color:var(--ink-2);margin:0 0 22px}
 .phones{display:flex;justify-content:center;align-items:flex-start}
 .phone{position:relative;margin:0;width:min(46%,230px);border:8px solid var(--ink);border-radius:36px;background:var(--ink);overflow:hidden;box-shadow:0 26px 50px rgba(22,21,19,.16)}
-.phone::before{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:30%;height:15px;border-radius:10px;background:var(--ink);z-index:1}
 .phone img{border-radius:28px}
 .phone + .phone{margin:56px 0 0 -28px}
 .facts{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:15.5px;border-top:1px solid var(--rule);padding-top:18px}
@@ -198,6 +197,7 @@ a:hover{text-decoration-thickness:2px}
   .wrap{padding:0 18px}
   .bar .mark span{display:none}
   .bar .links{gap:18px;font-size:14.5px}
+  .bar .links .opt{display:none}
   .band{padding:64px 0}
   .pair .inner{padding:0 18px}
   .shots{gap:10px}
@@ -234,7 +234,7 @@ a:hover{text-decoration-thickness:2px}
 
 <nav class="bar" aria-label="Main"><div class="wrap">
   <a class="mark" href="#top"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#F6F4EF"/><path transform="translate(32 33) scale(1.15) translate(-27.5 -33.25)" d="M15 20h10v4.5C27.5 20.6 31.4 18.5 37 18.5h3v10h-3.5C29.6 28.5 25 31.6 25 39v9H15z" fill="#161513"/></svg><span>Raihan Syahrin</span></a>
-  <div class="links"><a href="#about">About</a><a href="#work">Work</a><a href="#freelance">Freelance</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+  <div class="links"><a href="#about">About</a><a href="#work">Work</a><a class="opt" href="#freelance">Freelance</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
 </div></nav>
 
 <header class="intro" id="top"><div class="wrap">
