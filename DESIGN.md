@@ -16,6 +16,8 @@ Rules for any edit to `index.html`, by hand or by an AI assistant. If a change b
 | Role | Face | Size |
 |---|---|---|
 | Display (h1, h2, numbers, kickers) | Bricolage Grotesque 700/800, tight tracking (-.03em) | h1 `clamp(56px,9vw,112px)`, band h2 `clamp(40px,6vw,72px)` |
+| Hero name | Bricolage Grotesque 500 | `clamp(28px,3.4vw,44px)` |
+| Hero role | Instrument Serif italic 400, terracotta | `clamp(52px,7.4vw,104px)`. Only place the serif is used |
 | Body | IBM Plex Sans 400/600 | 17px desktop, 16px mobile, line-height 1.6 |
 | Kicker | Bricolage 700, 13px, uppercase, .08em | — |
 
@@ -40,6 +42,9 @@ Each project band has its own soft background + one darker kicker color taken fr
 - Icon shelf: 9 columns, 5 at tablet, 3 on phone, `minmax(0,1fr)` so long names never resize icons.
 
 ## Interaction
+
+- Nav: floating ink bar (sticky, 12px from top, radius 14px) with the phone-R mark; the link for the section in view gets a terracotta underline.
+- Favicon: ink phone with a paper R and a terracotta speaker slot.
 
 - Links: underline 1px, 2px on hover. Focus ring 3px `currentColor`.
 - Screenshots open in the `<dialog>` lightbox; prev/next stay within the project; Esc, arrows, and swipe work.
